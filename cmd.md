@@ -42,3 +42,10 @@ COPY . /app
 
 먼저 package.json을 복사하여 npm install이 일어나지 않도록 해준다.
 그리고 수정된 소스부터 다시 이미지 생성이 되도록 해줘야지 최적화를 해줄수 있다.
+
+attached & detached의 차이
+docker run은 디폴트로 attached 상태이며 현재 컨테이너에 연결되어 출력되는 로그들을 볼수 있는 상태
+docker start는 디폴트로 detached 상태이며 현재 컨테이너와 분리된 상태
+
+만약 run상태에서 detached 모드로 설정을 원한다면 -a 옵션 추가
+만약 start상태에서 attached 모드로 설정을 원한다면 docker logs 컨테이너id 입력
